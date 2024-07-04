@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geo Direct</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    body, html {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #0f0c29, #1a173e, #24243e);
+      color: #fff;
+      height: 100%;
+      overflow: hidden;
+      margin: 0;
+    }
+    .parallax {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .btn-custom {
+      background-color: #302b63;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn-custom:hover {
+      background-color: #5b5498;
+    }
+    .gradient-background {
+      background: linear-gradient(to right, rgba(48, 43, 99, 0.7), rgba(91, 84, 152, 0.7));
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    .hero-content {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar bg-transparent shadow-lg fixed top-0 z-50">
+    <div class="flex-1">
+      <a href="#" class="btn btn-ghost normal-case text-xl font-bold text-3xl">Geo Direct</a>
+    </div>
+    <div class="flex-none">
+      <ul class="menu menu-horizontal px-1 text-lg">
+        <li><a class="font-bold">Home</a></li>
+        <li><a class="font-bold">Join Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="hero" style="background-image: url('hero-bg.jpg');"> 
+    <div class="hero-overlay bg-opacity-60"></div>
+    <div class="hero-content text-center text-neutral-content">
+      <div class="max-w-md gradient-background">
+        <h1 class="mb-5 text-5xl font-bold">Geo Direct</h1>
+        <p class="mb-5 text-xl font-bold">Building the future of Roblox experiences.</p>
+        <button class="btn-custom">Get Started</button>
+      </div>
+    </div>
+  </div>
+  <footer class="footer footer-center p-4 bg-[#1a173e]">
+    <div>
+      <p class="font-bold">Copyright © 2023 - All right reserved by Geo Direct</p>
+    </div>
+  </footer>
+  <script>
+    ScrollReveal().reveal('.hero-content', { 
+      delay: 300,
+      distance: '50px',
+      origin: 'bottom',
+      reset: true, 
+      interval: 200, 
+    });
+    gsap.from('.navbar', {
+      duration: 1,
+      y: '-100%',
+      ease: 'power2.out',
+      delay: 0.5
+    });
+  </script>
+</body>
+</html>
